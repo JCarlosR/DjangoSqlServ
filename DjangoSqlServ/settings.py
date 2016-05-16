@@ -25,7 +25,7 @@ SECRET_KEY = 'j3tw&28x*vbjw6kkaby=3@@%zcm&+@!6)#qfvcv)^#)(&9rv)3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,7 +48,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    #'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'DjangoSqlServ.urls'
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'DjangoSqlServ.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,11 +77,15 @@ WSGI_APPLICATION = 'DjangoSqlServ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'my_database',
+        'NAME': 'cliserv',
         'ENGINE': 'sqlserver_ado',
-        'HOST': 'dbserver\\ss2012',
+        'HOST': 'cliserv.database.windows.net',
         'USER': 'jcarlos17',
         'PASSWORD': 'JuanRamos17',
+        'OPTIONS' : {
+            'provider': 'SQLNCLI11',
+            'extra_params' : 'DataTypeCompatibility=80;MARS Connection=True'
+        },
     }
 }
 
