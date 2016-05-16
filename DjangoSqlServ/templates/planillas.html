@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Planillas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<h1>Listado de planillas</h1>
+	<table class="table hover">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>AFP</th>
+				<th>Trabajador</th>
+				<th>Mes</th>
+				<th>Días falta</th>
+				<th>Horas falta</th>
+				<th>Total Ingresos</th>
+				<th>Total Descuentos</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in planillas %}
+				<tr>
+					<td>{{ p.idPlanilla }}</td>
+					<td>{{ p.idAfp }}</td>
+					<td>{{ p.idTrabajador }}</td>
+					<td>{{ p.idMes }}</td>
+					<td>{{ p.DiasFalta }}</td>
+					<td>{{ p.HorasFalta }}</td>
+					<td>{{ p.TotalIngresos }}</td>
+					<td>{{ p.TotalDescuentos }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+</body>
+</html>

@@ -5,13 +5,12 @@ from django.http import HttpResponseRedirect
 from .models import Planilla
 
 def hello_world(request):
-	planillas = Planilla.objects()
-	template = loader.get_template('planillas.html')
+	planillas = Planilla.objects.all()
 	context = {
 		'planillas': planillas
 	}
 
-	return HttpResponse(template.render(context, request))
+	return render(request, 'planillas.html', context)
 
 # def developer(request, name):
 # 	name=name.replace("_", " ")
