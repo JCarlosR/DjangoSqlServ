@@ -3,6 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import Planilla, Detalle
+from django.db import connection
 
 def planillas(request):
 	planillas = Planilla.objects.all()
@@ -19,6 +20,16 @@ def detalles(request,id):
 	}
 
 	return render(request, 'detalles.html', context)
+
+def ejecutar(request):
+	if request.method == 'POST':
+		cursor = connection.cursor()
+		try:
+		    cursor.callproc('[dbo].[SPCalculandoPlanillas]', [request.POST['mes']])
+		finally:
+		    cursor.close()
+
+	return HttpResponseRedirect(request.META.get('HTTP_REFERER','/')) 
 
 # def developer(request, name):
 # 	name=name.replace("_", " ")

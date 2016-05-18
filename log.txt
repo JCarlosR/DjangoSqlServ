@@ -1,8 +1,14 @@
-commit 53c8882c10a448df6ffbf41631964f3390224caf
+commit c846558893648774071aef234cd80978796dcb72
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Tue May 17 22:54:32 2016 -0500
+
+    Remove 4th line
+
+commit 07f567c6f666bf0f5262fcc559654a3505ed4ba5
 Author: Juan Carlos <juancagb.17@gmail.com>
 Date:   Tue May 17 22:50:34 2016 -0500
 
-    t
+    Urls and templates
 
 commit f97ff0f0c8f2f20a24fa22badbcf031972c9d90f
 Author: Juan Carlos <juancagb.17@gmail.com>

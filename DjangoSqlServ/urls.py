@@ -20,5 +20,7 @@ from main import views
 urlpatterns = patterns('',
     url(r'^$', views.planillas, name='planillas'),
     url(r'^detalles/(?P<id>\d+)/$', views.detalles, name='detalles'),
+    url(r'^ejecutar', views.ejecutar, name='ejecutar'),
     url(r'^admin/', include(admin.site.urls)),
 )
+

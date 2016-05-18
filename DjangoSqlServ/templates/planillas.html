@@ -7,7 +7,21 @@
 </head>
 <body>
 <div class="container">
-	<h1>Listado de planillas</h1>
+	<h3>Generar planillas</h3>
+	<form action="/ejecutar" method="POST" class="form-inline">
+		{% csrf_token %}
+		<div class="form-group">
+			<label for="mes">Seleccione mes:</label>
+			<select name="mes" required class="form-control">
+				<option value="">Seleccione</option>
+				<option value="1">Junio</option>
+				<option value="2">Julio</option>
+			</select>
+		</div>		
+		<button type="submit" class="btn btn-success">Generar planilla</button>
+	</form>
+
+	<h3>Listado de planillas</h3>
 	<table class="table hover">
 		<thead>
 			<tr>
