@@ -2,15 +2,23 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import Planilla
+from .models import Planilla, Detalle
 
-def hello_world(request):
+def planillas(request):
 	planillas = Planilla.objects.all()
 	context = {
 		'planillas': planillas
 	}
 
 	return render(request, 'planillas.html', context)
+
+def detalles(request,id):
+	detalles = Detalle.objects.filter(idPlanilla=id)
+	context = {
+		'detalles': detalles
+	}
+
+	return render(request, 'detalles.html', context)
 
 # def developer(request, name):
 # 	name=name.replace("_", " ")
@@ -28,6 +36,7 @@ def hello_world(request):
 # 	}
 
 # 	return HttpResponse(template.render(context, request))
+
 
 # def new_developer(request):
 # 	if request.method == 'POST':

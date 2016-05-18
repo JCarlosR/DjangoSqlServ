@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Planillas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<h1>Detalles de planilla</h1>
+	<table class="table hover">
+		<thead>
+			<tr>
+				<th>ID Planilla</th>
+				<th>Concepto</th>
+				<th>Monto</th>
+				<th>ID Movimiento</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for d in detalles %}
+				<tr>
+					<td>{{ d.idPlanilla }}</td>
+					<td>{{ d.idConcepto }}</td>
+					<td>{{ d.Monto }}</td>
+					<td>{{ d.idMovimiento }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="/" class="btn btn-success">Volver a planillas</a>
+</div>
+</body>
+</html>

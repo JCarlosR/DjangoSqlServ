@@ -14,3 +14,12 @@ class Planilla(models.Model):
 
 	class Meta:
 		db_table = 'Planilla'
+
+class Detalle(models.Model):
+	idPlanilla = models.IntegerField(primary_key=True)
+	idConcepto = models.IntegerField(primary_key=True)
+	Monto = models.DecimalField(max_digits=7, decimal_places=2)
+	idMovimiento = models.IntegerField()
+
+	class Meta:
+		db_table = 'DetaPlanilla'

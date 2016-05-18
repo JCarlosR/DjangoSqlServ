@@ -19,6 +19,7 @@
 				<th>Horas falta</th>
 				<th>Total Ingresos</th>
 				<th>Total Descuentos</th>
+				<th>Detalles</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -32,6 +33,9 @@
 					<td>{{ p.HorasFalta }}</td>
 					<td>{{ p.TotalIngresos }}</td>
 					<td>{{ p.TotalDescuentos }}</td>
+					<td>
+						<a href="/detalles/{{ p.idPlanilla }}" class="btn btn-primary">Ver</a>
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
