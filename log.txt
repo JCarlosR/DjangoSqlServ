@@ -1,0 +1,41 @@
+commit 53c8882c10a448df6ffbf41631964f3390224caf
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Tue May 17 22:50:34 2016 -0500
+
+    t
+
+commit f97ff0f0c8f2f20a24fa22badbcf031972c9d90f
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Mon May 16 15:35:00 2016 -0500
+
+    Correct requirements
+
+commit a9179f339f64bb58a9357cf87efee3d95f6cd436
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Mon May 16 15:32:24 2016 -0500
+
+    Successful connection
+
+commit d332da846ffcc195c96929cb2147d3d134426c6d
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Mon May 16 14:26:26 2016 -0500
+
+    SqlServ connection and templates dir
+
+commit 11cd252012b8491f1b339a058c73a8831977dcd9
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Fri May 13 09:33:05 2016 -0500
+
+    Planilla model and app added
+
+commit ef688de24361a1cb104b03a019df4c731467c62c
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Fri May 13 07:50:20 2016 -0500
+
+    Database config and main app
+
+commit 5a1a66c9c7e5effc590ee01318e775a37c8e2fba
+Author: Juan Carlos <juancagb.17@gmail.com>
+Date:   Fri May 13 07:16:38 2016 -0500
+
+    Django + DjangoMssql
